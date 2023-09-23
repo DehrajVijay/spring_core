@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<!-- This Beans from metadata -->
+	<bean class="com.springcore.Student" name="student1">
+		<property name="StudentId">
+			<value>0001</value>
+
+		</property>
+		<property name="StudentName">
+			<value>Vijay Dehraj</value>
+		</property>
+		<property name="StudentAddress">
+			<value>Haryana</value>
+		</property>
+
+	</bean>
+<!-- 2nd way of inserting values in as an attribute and not as an element  -->
+<bean class="com.springcore.Student" name="student2">
+<property name="StudentId" value="0002"/>
+<property name="StudentName" value="Naveen Dehraj"/>
+<property name="StudentAddress" value="rohtak"/>
+
+</bean> 
+<!-- 3rd way of inserting values as an attribute and not as an element using p schema-->
+<bean class="com.springcore.Student" name="student3" p:studentId="2223" p:studentName="rudra" p:studentAddress="rohtak"/>
+
+</beans>
